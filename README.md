@@ -5,12 +5,11 @@ This is a simple and extendable template for emotion classification using the [H
 ## 📂 Dataset
 
 We use the [SetFit/emotion](https://huggingface.co/datasets/setfit/emotion) dataset, which consists of six emotion classes:
-- sadness
-- joy
-- love
-- anger
-- fear
-- surprise
+* Classes: [sadness, joy, love, anger, fear, surprise]
+* Statistics:
+  * Training dataset: 16000
+  * Validation dataset: 2000
+  * Test dataset: 2000
 
 ## ⚙️ Installation
 
@@ -87,6 +86,21 @@ python demo.py
 You can enter a sentence and get the predicted emotion interactively.
 ![image](https://github.com/user-attachments/assets/95dfd253-e9b2-4e6e-a16d-e25a4fa3e269)
 
+### 5️⃣ Run on API
+Start the API server:
+```bash
+uvicorn api:app --host 0.0.0.0 --port 8000 --reload
+```
+`POST/predict`
+```bash
+"text": "I really do not want to work today!"
+```
+`Response:`
+```bash
+{
+  "emotion": "sadness"
+}
+```
 
 ## 📌 Notes
 
@@ -96,5 +110,5 @@ You can enter a sentence and get the predicted emotion interactively.
 
 ## ✅ To Do
 
-- [ ] API
+- [ ] 5-fold cross validation
 - [ ] Docker 

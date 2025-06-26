@@ -80,10 +80,15 @@ python inference.py --text "I feel amazing today!"
 | `--model_path`   | Path to model checkpoint            | ./outputs/model     |
 
 ### 4️⃣ Interactive Streamlit Demo
+You can enter a sentence and get the predicted emotion interactively.
+#### Run with CLI
 ```bash
 python demo.py
 ```
-You can enter a sentence and get the predicted emotion interactively.
+#### Run with streamlit
+```bash
+streamlit run demo.py
+```
 ![image](https://github.com/user-attachments/assets/95dfd253-e9b2-4e6e-a16d-e25a4fa3e269)
 
 ### 5️⃣ Run on API

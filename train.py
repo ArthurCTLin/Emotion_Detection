@@ -5,7 +5,7 @@ from datasets import load_dataset
 
 from dataset import read_dataset, CustomDataset, collate_fn
 from model import load_model
-from utils import compute_metrics_trainer as compute_metrics_trainer, plot_matrix_trainer, seed_everything
+from utils import compute_metrics_trainer, plot_matrix_trainer, seed_everything
 
 
 def parse_args():

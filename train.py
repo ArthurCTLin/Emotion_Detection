@@ -62,6 +62,8 @@ def main():
         per_device_train_batch_size=args.batch_size,
         per_device_eval_batch_size=args.batch_size,
         learning_rate=args.lr,
+        optim=args.optimizer,
+        lr_scheduler_type=args.lr_scheduler_type,
         weight_decay=args.weight_decay,
         warmup_ratio=args.warmup_ratio,
         evaluation_strategy='epoch',
